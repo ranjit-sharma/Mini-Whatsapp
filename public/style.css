@@ -1,0 +1,197 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #d9fdd3, #e8f5ff);
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #075e54;
+    font-size: 36px;
+    margin-bottom: 35px;
+    animation: fadeDown 0.8s ease;
+}
+
+/* Chat Card */
+.chat {
+    background: rgba(255, 255, 255, 0.95);
+    width: 350px;
+    margin: 15px;
+    padding: 22px;
+    border-radius: 20px;
+    display: inline-block;
+    vertical-align: top;
+
+    border-left: 5px solid #25d366;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+    animation: fadeUp 0.7s ease;
+    transition: all 0.3s ease;
+}
+
+/* Card Hover */
+.chat:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* From / To */
+.chat p {
+    margin: 10px 0;
+}
+
+.chat b {
+    color: #075e54;
+}
+
+/* Message Bubble */
+.msg {
+    background: linear-gradient(135deg, #128c7e, #25d366);
+    color: white;
+
+    padding: 13px 16px;
+    margin-top: 15px;
+
+    border-radius: 18px 18px 18px 5px;
+
+    font-size: 15px;
+    line-height: 1.5;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+.msg:hover {
+    transform: translateX(5px);
+}
+
+/* Date */
+.created {
+    color: #777;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* Buttons */
+button {
+    border: none;
+    outline: none;
+
+    padding: 12px 22px;
+    margin: 8px;
+
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #075e54, #25d366);
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+/* delete button */
+.delete-btn {
+    background: linear-gradient(135deg, #ff4d4d, #d90429);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(217, 4, 41, 0.25);
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(135deg, #d90429, #b00020);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 18px rgba(217, 4, 41, 0.35);
+}
+
+.delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* Button Hover */
+button:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Button Click */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Links as Buttons */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* New Chat Button */
+.new-chat {
+    display: block;
+    width: fit-content;
+
+    margin: 0 auto 30px;
+
+    padding: 13px 25px;
+
+    background: #075e54;
+    color: white;
+
+    border-radius: 30px;
+
+    font-weight: bold;
+
+    transition: all 0.3s ease;
+}
+
+.new-chat:hover {
+    background: #25d366;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
